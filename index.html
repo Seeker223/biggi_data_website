@@ -1,304 +1,308 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Biggi Data — Affordable Mobile Data for Everyone</title>
-  <meta name="description" content="Biggi Data — Buy cheap, fast, and reliable mobile data bundles. Simple checkout, instant delivery, rewards and great customer support." />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Biggi Data — Fast, Reliable & Rewarding Data Bundles</title>
+<meta name="description" content="Buy data instantly, earn rewards, and enjoy secure transactions with Biggi Data. Download our app for full features.">
+<meta name="keywords" content="Biggi Data, data bundles, airtime, rewards, wallet, Nigeria">
+<meta property="og:title" content="Biggi Data — Fast, Reliable Data Bundles">
+<meta property="og:description" content="Instant data delivery, secure wallet, and reward system. Download our app today.">
+<meta property="og:image" content="img/biggiImage.png">
+<link rel="icon" type="image/png" href="img/biggiImage.png">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-  <link rel="icon" href="/favicon.ico" />
+<style>
+:root {
+  --bg: #000;
+  --text: #fff;
+  --card: #222;
+  --accent: #FF7A00;
+  --muted: #bbb;
+}
+body.light {
+  --bg: #fff;
+  --text: #000;
+  --card: #f7f7f7;
+  --accent: #FF7A00;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  overflow-x: hidden;
+  transition: background 0.4s, color 0.4s;
+}
+a { text-decoration: none; color: inherit; }
+.wrapper { width: 90%; max-width: 1200px; margin: auto; text-align:center; }
 
-  <style>
-    :root{
-      --bg:#0b1020;
-      --card:#0f1724;
-      --accent:#FF8C00;
-      --muted:#9AA3B2;
-      --glass: rgba(255,255,255,0.04);
-    }
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0;font-family:Inter,system-ui,Arial,sans-serif;background:linear-gradient(180deg,var(--bg) 0%, #071024 100%);color:#E7EEF8;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;
-    }
+/* HEADER */
+header { padding: 20px 0; display: flex; justify-content: space-between; align-items: center; position: relative; z-index: 10; }
+.logo { display: flex; align-items: center; gap: 14px; }
+.logo img { background-color: white; width: 60px; height: 60px; }
+.logo span { font-size: 26px; font-weight: 700; color: var(--accent); }
+.nav-links { display: flex; gap: 30px; font-size: 16px; }
+.nav-links a:hover { color: var(--accent); transition: 0.3s; }
+.toggle-theme { background: var(--card); border: 1px solid var(--accent); padding: 8px 15px; border-radius: 10px; cursor: pointer; transition: 0.3s; }
+.toggle-theme:hover { background: var(--accent); color: #000; }
+.hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
+.hamburger span { width: 28px; height: 3px; background: var(--text); border-radius: 5px; transition: 0.3s; }
 
-    /* Container */
-    .container{max-width:1200px;margin:0 auto;padding:36px 20px}
+/* HERO WITH GLOW */
+.hero { text-align: center; padding: 120px 0 60px; position: relative; overflow: hidden; }
+.hero-bg {
+  position: absolute; top: -50%; left: -50%; width: 200%; height: 200%;
+  background: radial-gradient(circle at center, rgba(255,122,0,0.3), transparent 70%);
+  animation: glow 8s infinite alternate;
+  z-index: 0;
+  filter: blur(100px);
+}
+.hero h1, .hero p, .cta-btn { position: relative; z-index: 1; }
+@keyframes glow { 0%{transform:translate(0,0) scale(1);}50%{transform:translate(20px,20px) scale(1.1);}100%{transform:translate(0,0) scale(1);} }
 
-    /* Header */
-    header{display:flex;align-items:center;justify-content:space-between;padding:8px 0}
-    .brand{display:flex;align-items:center;gap:12px}
-    .logo{width:48px;height:48px;border-radius:10px;background:linear-gradient(135deg,#ff9a3c,#ff6b00);display:grid;place-items:center;font-weight:800;color:#fff}
-    .brand h1{margin:0;font-size:18px;letter-spacing:0.2px}
-    nav{display:flex;gap:18px;align-items:center}
-    nav a{color:var(--muted);text-decoration:none;font-weight:600}
-    .cta{background:var(--accent);color:#081223;padding:10px 16px;border-radius:10px;font-weight:700;text-decoration:none}
+.hero h1 { font-size: 48px; font-weight: 800; line-height: 1.2; }
+.hero span { color: var(--accent); text-shadow: 0 0 20px var(--accent); }
+.hero p { margin-top: 15px; font-size: 18px; opacity: 0.85; }
+.cta-btn { margin-top: 30px; padding: 14px 38px; background: var(--accent); color: #000; font-size: 18px; font-weight: 600; border-radius: 12px; cursor: pointer; box-shadow: 0 0 25px var(--accent); transition: 0.3s; }
+.cta-btn:hover { transform: scale(1.05); }
 
-    /* Hero */
-    .hero{display:grid;grid-template-columns:1fr 420px;gap:32px;align-items:center;padding:48px 0}
-    .hero h2{font-size:36px;margin:0 0 12px;color:#fff}
-    .hero p{margin:0 0 20px;color:var(--muted);line-height:1.6}
+/* FEATURES */
+.features { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px,1fr)); gap: 25px; margin: 60px 0; justify-items:center; align-items: center;}
+.card { background: var(--card); padding: 28px; border-radius: 18px; border: 1px solid #333; transition: 0.4s; text-align:center; }
+.card:hover { transform: translateY(-6px); border-color: var(--accent); box-shadow: 0 0 25px var(--accent); }
+.card h3, .card h4 { color: var(--accent); margin-bottom: 10px; }
+.card p, .card .muted { opacity: 0.85; font-size: 15px; }
 
-    .features{display:flex;gap:12px;flex-wrap:wrap}
-    .feature{background:var(--glass);padding:12px 14px;border-radius:12px;font-weight:600;color:#fff}
+/* STEPS */
+.steps { display: flex; gap: 18px; flex-wrap: wrap; justify-content: center; margin-top:28px; }
+.step { background: var(--card); padding: 24px 18px; border-radius: 16px; text-align: center; flex: 1; min-width: 220px; max-width: 280px; transition: transform 0.3s ease, box-shadow 0.3s ease; cursor: default; }
+.step svg { display: block; margin: 0 auto 12px; transition: transform 0.3s ease, filter 0.3s ease; }
+.step strong { display: block; margin-bottom: 8px; font-size: 18px; color: var(--accent); }
+.step p { font-size: 14px; color: var(--muted); line-height: 1.5; }
+.step:hover { transform: translateY(-8px); box-shadow: 0 0 25px var(--accent); }
+.step:hover svg { transform: scale(1.2) rotate(5deg); filter: drop-shadow(0 0 6px var(--accent)); }
 
-    /* Card (right) */
-    .card{background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:20px;border-radius:16px;border:1px solid rgba(255,255,255,0.04)}
-    .card h3{margin:0 0 12px}
-    .price{font-size:22px;font-weight:800;color:var(--accent)}
-    .buyBtn{display:inline-block;margin-top:12px;background:var(--accent);color:#071023;padding:10px 14px;border-radius:10px;font-weight:700;text-decoration:none}
+/* DOWNLOAD */
+#download-section { text-align: center; padding: 80px 0; }
+#download-section .download-buttons { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-top: 20px; }
+.dl-btn { padding: 14px 34px; background: var(--accent); border-radius: 12px; color: #000; box-shadow: 0 0 20px var(--accent); font-size: 16px; font-weight: 600; }
+.dl-btn.disabled { opacity:0.6; cursor:not-allowed; pointer-events:none; }
 
-    /* Trust bar */
-    .trust{display:flex;gap:18px;align-items:center;margin-top:22px;color:var(--muted);font-weight:600}
-    .trust div{display:flex;gap:8px;align-items:center}
+/* PHONE MOCKUP */
+.phone-wrapper { margin-top: 40px; display: flex; justify-content: center; }
+.phone { width: 280px; height: 560px; background: #111; border-radius: 36px; padding: 18px; box-shadow: 0 0 35px var(--accent); }
+.phone img { width: 100%; height: 100%; border-radius: 28px; }
 
-    /* Grid sections */
-    .section{padding:64px 0}
-    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-    .card-plain{background:rgba(255,255,255,0.02);padding:20px;border-radius:12px;border:1px solid rgba(255,255,255,0.03)}
-    .card-plain h4{margin:0 0 8px}
-    .muted{color:var(--muted)}
+/* TESTIMONIALS CAROUSEL */
+#testimonials { margin: 80px 0; text-align: center; }
+#testimonials h2 { font-size: 36px; margin-bottom: 40px; color: var(--accent); }
+.test-carousel { position: relative; overflow: hidden; display: flex; justify-content: center; align-items: center; min-height: 180px; }
+.testimonial { min-width: 300px; max-width: 400px; background: var(--card); padding: 28px; border-radius: 18px; border: 1px solid #333; box-shadow: 0 0 14px rgba(255,122,0,0.1); text-align:center; position: absolute; opacity: 0; transition: opacity 0.8s ease, transform 0.8s ease; }
+.testimonial.active { opacity: 1; position: relative; transform: scale(1); }
 
-    /* Pricing */
-    .pricing{display:flex;gap:18px;flex-wrap:wrap}
-    .price-card{background:#07172b;padding:20px;border-radius:14px;border:1px solid rgba(255,255,255,0.03);flex:1;min-width:220px}
-    .price-card h5{margin:0 0 8px}
-    .price-amount{font-size:20px;font-weight:800;color:var(--accent)}
+/* CONTACT */
+#contact { margin: 80px 0; }
+#contact .form { max-width:480px; margin:auto; display:flex; flex-direction:column; gap:12px; }
+input, textarea { width:100%; padding:10px; border-radius:8px; border:1px solid #333; background:#111; color:#fff; }
+button.btn { cursor:pointer; background: var(--accent); color:#000; font-weight:600; border-radius:8px; padding:10px; }
 
-    /* CTA Bar */
-    .ctaBar{display:flex;align-items:center;justify-content:space-between;padding:18px;background:linear-gradient(90deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border-radius:12px;border:1px solid rgba(255,255,255,0.03)}
+/* FOOTER */
+footer { text-align:center; margin:80px 0 40px; opacity:0.9; }
+footer a { color: var(--accent); }
 
-    /* Footer */
-    footer{margin-top:48px;color:var(--muted);font-size:14px;padding-bottom:48px}
+/* WHATSAPP BUTTON */
+.whatsapp-btn { position: fixed; bottom: 25px; right: 25px; background: var(--accent); color: #000; padding: 14px 18px; border-radius: 50%; font-size: 24px; text-align: center; z-index: 999; box-shadow: 0 0 20px var(--accent); transition: 0.3s; }
+.whatsapp-btn:hover { transform: scale(1.2); }
 
-    /* Responsive */
-    @media (max-width:900px){
-      .hero{grid-template-columns:1fr;}
-      .grid-3{grid-template-columns:1fr;}
-      nav{display:none}
-    }
+/* POLICY BUTTONS */
+.policy-buttons { position: fixed; bottom: 25px; left: 25px; display: flex; flex-direction: column; gap: 12px; z-index: 999; }
+.policy-btn { background: var(--card); color: var(--accent); padding: 10px 16px; border-radius: 10px; font-size: 14px; font-weight: 600; text-align: center; box-shadow: 0 0 15px rgba(255,122,0,0.2); transition: 0.3s; }
+.policy-btn:hover { background: var(--accent); color: #000; transform: scale(1.05); }
 
-    /* simple animation */
-    .fadeIn{animation:fadeIn .6s ease both}
-    @keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+/* ANIMATIONS */
+.fade-in { opacity:0; transform:translateY(25px); transition:0.7s; }
+.fade-in.show { opacity:1; transform:translateY(0); }
 
-    /* Form */
-    .form-row{display:flex;gap:8px}
-    .form-row input{flex:1;padding:10px;border-radius:10px;border:1px solid rgba(255,255,255,0.06);background:transparent;color:#fff}
-    .form-row button{background:var(--accent);border-radius:10px;padding:10px 14px;border:none;color:#071023;font-weight:700}
-
-    /* small helpers */
-    .pill{background:rgba(255,255,255,0.03);padding:6px 10px;border-radius:999px;color:var(--muted);font-weight:700}
-  </style>
+/* RESPONSIVE */
+@media(max-width:768px){
+  .hamburger { display:flex; }
+  .nav-links { position:absolute; top:80px; right:0; width:100%; display:none; flex-direction:column; padding:20px 0; text-align:center; background:var(--bg); border-top:1px solid var(--accent); }
+  .nav-links.open { display:flex; }
+  .hero h1 { font-size:36px; }
+}
+</style>
 </head>
 <body>
-  <div class="container">
-    <header>
-      <div class="brand">
-        <div class="logo">BD</div>
-        <div>
-          <h1>Biggi Data</h1>
-          <div class="muted" style="font-size:12px;margin-top:2px">Affordable mobile data — instant delivery</div>
-        </div>
-      </div>
 
-      <nav>
-        <a href="#features">Features</a>
-        <a href="#pricing">Pricing</a>
-        <a href="#faq">FAQ</a>
-        <a class="cta" href="#buy">Buy Data</a>
-      </nav>
-    </header>
+<header class="wrapper fade-in">
+  <div class="logo"><img src="img/icon.png" alt="Logo"><span>Biggi Data</span></div>
+  <nav class="nav-links" id="navMenu">
+    <a href="#features">Features</a>
+    <a href="#download-section">Download</a>
+    <a href="#testimonials">Testimonials</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <button class="toggle-theme" id="themeToggle">Light Mode</button>
+  <div class="hamburger" id="hamburgerBtn"><span></span><span></span><span></span></div>
+</header>
 
-    <main>
-      <section class="hero">
-        <div>
-          <h2>Data bundles made simple — fast, cheap, reliable</h2>
-          <p>Biggi Data lets you purchase mobile data for any Nigerian network with instant delivery, secure checkout, and rewards every time you buy.</p>
+<!-- HERO -->
+<section class="hero wrapper fade-in">
+  <div class="hero-bg"></div>
+  <h1>Buy Data <span>Fast</span>. Reliable. Affordable.</h1>
+  <p>Instant delivery, rewards, and wallet security — all through our mobile app. <strong>Payments occur only inside the app.</strong></p>
+  <button class="cta-btn" onclick="scrollToDownload()">Download App</button>
+</section>
 
-          <div class="features">
-            <div class="feature">Instant Delivery</div>
-            <div class="feature">Low Prices</div>
-            <div class="feature">Rewards & Cashback</div>
-          </div>
+<!-- FEATURES -->
+<section id="features" class="features wrapper fade-in">
+  <div class="card"><h3>Instant Delivery</h3><p>Your data arrives in seconds — see it in the app.</p></div>
+  <div class="card"><h3>Reward System</h3><p>Earn redeemable points whenever you buy data via the app.</p></div>
+  <div class="card"><h3>Secure Wallet</h3><p>Deposit and manage funds safely in-app. Payments handled in the app only.</p></div>
+  <div class="card"><h3>24/7 Support</h3><p>Always available when you need help. Contact in-app or via support email.</p></div>
+</section>
 
-          <div style="margin-top:24px;display:flex;gap:12px;align-items:center">
-            <a class="cta" href="#buy">Get Data</a>
-            <a style="color:var(--muted);font-weight:700;text-decoration:none" href="#pricing">See Plans</a>
-          </div>
-
-          <div class="trust">
-            <div><span class="pill">100k+</span><span class="muted">Users</span></div>
-            <div><span class="pill">99.9%</span><span class="muted">Uptime</span></div>
-            <div><span class="pill">24/7</span><span class="muted">Support</span></div>
-          </div>
-        </div>
-
-        <aside class="card fadeIn">
-          <h3>Quick Buy</h3>
-          <p class="muted">Buy data in three steps. No account required — or sign in to save credits.</p>
-
-          <div style="display:flex;justify-content:space-between;align-items:center;margin-top:12px">
-            <div>
-              <div class="price">From ₦200</div>
-              <div class="muted" style="font-size:13px">Smallest daily plan</div>
-            </div>
-            <div>
-              <a class="buyBtn" href="#buy">Buy Now</a>
-            </div>
-          </div>
-
-          <div style="margin-top:18px">
-            <label style="font-weight:700;color:#fff;font-size:13px">Network</label>
-            <div style="display:flex;gap:8px;margin-top:8px">
-              <select style="flex:1;padding:10px;border-radius:10px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:#fff">
-                <option value="mtn">MTN</option>
-                <option value="glo">GLO</option>
-                <option value="airtel">Airtel</option>
-                <option value="9mobile">9Mobile</option>
-              </select>
-            </div>
-          </div>
-
-          <div style="margin-top:12px" id="buy">
-            <label style="font-weight:700;color:#fff;font-size:13px">Phone</label>
-            <div style="margin-top:8px" class="form-row">
-              <input id="phone" placeholder="0801 xxx xxxx" />
-              <button id="buyNow">Continue</button>
-            </div>
-            <div id="buyMsg" style="margin-top:10px;color:var(--muted);font-size:13px"></div>
-          </div>
-        </aside>
-      </section>
-
-      <section id="features" class="section">
-        <div class="container">
-          <h3 style="margin-bottom:12px">Why Biggi Data</h3>
-          <div class="grid-3">
-            <div class="card-plain">
-              <h4>Transparent pricing</h4>
-              <p class="muted">No hidden fees. What you see is what you pay, with receipts delivered instantly.</p>
-            </div>
-            <div class="card-plain">
-              <h4>Auto delivery</h4>
-              <p class="muted">Transactions are processed immediately — no waiting, no queues.</p>
-            </div>
-            <div class="card-plain">
-              <h4>Rewards & referral</h4>
-              <p class="muted">Earn credits when you buy and when friends join using your link.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="pricing" class="section">
-        <div class="container">
-          <h3 style="margin-bottom:14px">Pricing & Plans</h3>
-          <div class="pricing">
-            <div class="price-card">
-              <h5>Daily Saver</h5>
-              <div class="price-amount">₦200 — 100MB</div>
-              <p class="muted" style="margin-top:8px">Perfect for light browsing and WhatsApp.</p>
-            </div>
-            <div class="price-card">
-              <h5>Weekly Boost</h5>
-              <div class="price-amount">₦1,000 — 1.5GB</div>
-              <p class="muted" style="margin-top:8px">Good for social and streaming on the go.</p>
-            </div>
-            <div class="price-card">
-              <h5>Monthly Pro</h5>
-              <div class="price-amount">₦3,500 — 12GB</div>
-              <p class="muted" style="margin-top:8px">Best value for heavy users and remote work.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="faq" class="section">
-        <div class="container">
-          <h3 style="margin-bottom:12px">Frequently asked</h3>
-          <div style="display:grid;gap:12px">
-            <div class="card-plain">
-              <strong>How fast is delivery?</strong>
-              <p class="muted" style="margin-top:6px">Most purchases are delivered instantly. In rare cases it can take up to a few minutes.</p>
-            </div>
-            <div class="card-plain">
-              <strong>Which networks do you support?</strong>
-              <p class="muted" style="margin-top:6px">MTN, GLO, Airtel and 9Mobile — more coming soon.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section">
-        <div class="container">
-          <div class="ctaBar">
-            <div>
-              <strong style="font-size:16px">Ready to top up?</strong>
-              <div class="muted" style="margin-top:6px">Secure checkout, multiple payment options</div>
-            </div>
-            <div style="display:flex;gap:10px;align-items:center">
-              <a class="buyBtn" href="#buy">Buy Data</a>
-              <a style="color:var(--muted);text-decoration:none;font-weight:700" href="#faq">Contact sales</a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-    </main>
-
-    <footer>
-      <div class="container" style="display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap">
-        <div>
-          <strong>Biggi Data</strong>
-          <div class="muted" style="margin-top:6px">© " + new Date().getFullYear() + " Biggi Data. All rights reserved."</div>
-        </div>
-
-        <div style="display:flex;gap:12px;align-items:center">
-          <a class="muted" href="#">Privacy</a>
-          <a class="muted" href="#">Terms</a>
-          <a class="muted" href="#">Support</a>
-        </div>
-      </div>
-    </footer>
+<!-- STEPS -->
+<section id="steps" class="wrapper fade-in">
+  <h2 style="color:var(--accent); margin-bottom:40px;">How It Works</h2>
+  <div class="steps">
+    <div class="step">
+      <svg width="40" height="40" fill="var(--accent)" viewBox="0 0 24 24"><path d="M21 7H3a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h18a2 2 0 0 0 2-2v-9a2 2 0 0 0-2-2zm0 2v2h-2V9h2zm-6 7a2 2 0 1 1 0-4 2 2 0 0 1 0 4z"/></svg>
+      <strong>1. Deposit Funds</strong>
+      <p>Add money safely to your in-app wallet. Payments are app-only.</p>
+    </div>
+    <div class="step">
+      <svg width="40" height="40" fill="var(--accent)" viewBox="0 0 24 24"><path d="M4 4h16v2H4zm0 6h16v2H4zm0 6h10v2H4z"/></svg>
+      <strong>2. Buy Data</strong>
+      <p>Choose your network and data plan. Instant delivery to your number.</p>
+    </div>
+    <div class="step">
+      <svg width="40" height="40" fill="var(--accent)" viewBox="0 0 24 24"><path d="M2 8v8h20V8H2zm2 2h16v4H4v-4z"/></svg>
+      <strong>3. Earn Tickets / Rewards</strong>
+      <p>Each data purchase gives you tickets that can be redeemed for cash in-app.</p>
+    </div>
+    <div class="step">
+      <svg width="40" height="40" fill="var(--accent)" viewBox="0 0 24 24"><path d="M4 6h16v12H4zm2 2v8h12V8H6zm4 2h4v4h-4z"/></svg>
+      <strong>4. Redeem Cash</strong>
+      <p>Convert your rewards into cash, then add to your main balance or withdraw via the app.</p>
+    </div>
   </div>
+</section>
 
-  <script>
-    // simple UI interactions
-    const buyNowBtn = document.getElementById('buyNow');
-    const phoneInput = document.getElementById('phone');
-    const buyMsg = document.getElementById('buyMsg');
+<!-- DOWNLOAD -->
+<section id="download-section" class="wrapper fade-in">
+  <h2>Download Biggi Data App</h2>
+  <p>All deposits, purchases, and rewards are fully managed within our official app. Payments are app-only.</p>
+  <div class="download-buttons">
+    <a href="#" class="dl-btn disabled" title="Coming Soon on Google Play">Google Play Store (Coming Soon)</a>
+    <a href="download.html" target="_blank" class="dl-btn">Download APK</a>
+  </div>
+  <div class="phone-wrapper">
+    <div class="phone"><img src="img/biggidata homescreen.png" alt="App Preview"></div>
+  </div>
+</section>
 
-    buyNowBtn && buyNowBtn.addEventListener('click', (e) => {
-      e.preventDefault();
-      const phone = phoneInput.value.trim();
-      if(!/^0[789][0-9]{8}$/.test(phone)){
-        buyMsg.textContent = 'Enter a valid Nigerian phone (e.g. 08012345678)';
-        buyMsg.style.color = '#FFBABA';
-        return;
-      }
+<!-- TESTIMONIALS -->
+<section id="testimonials" class="wrapper fade-in">
+  <h2>What Users Say</h2>
+  <div class="test-carousel">
+    <div class="testimonial active"><p>“Super fast delivery, my MTN data drops instantly!”</p><h4>— Joshua</h4></div>
+    <div class="testimonial"><p>“Reward points actually pay! Redeemed ₦1,200.”</p><h4>— Mariam</h4></div>
+    <div class="testimonial"><p>“Clean interface, smooth wallet deposits, zero issues.”</p><h4>— Collins</h4></div>
+  </div>
+</section>
 
-      buyMsg.textContent = 'Checking plans...';
-      buyMsg.style.color = '#9AA3B2';
+<!-- CONTACT -->
+<section id="contact" class="wrapper fade-in">
+  <h2>Contact Us</h2>
+  <form class="form" onsubmit="handleContact(event)">
+    <input id="name" type="text" placeholder="Name" required>
+    <input id="email" type="email" placeholder="Email" required>
+    <input id="phone" type="text" placeholder="Phone" required>
+    <textarea id="message" placeholder="Message"></textarea>
+    <button type="submit" class="btn">Send Message</button>
+  </form>
+</section>
 
-      // simulate redirect to checkout
-      setTimeout(()=>{
-        buyMsg.textContent = 'Great — redirecting to checkout...';
-        buyMsg.style.color = '#A6FFCC';
-        setTimeout(()=>{
-          window.location.hash = '#pricing';
-        },800)
-      },800)
-    });
+<!-- FOOTER -->
+<footer class="fade-in">
+  <p><strong>BiggiDataService</strong></p>
+  <p>123 Data Street, Lagos, Nigeria</p>
+  <p>WhatsApp: <a href="https://wa.me/2348012345678" target="_blank">+234 801 234 5678</a></p>
+  <p>Email: <a href="mailto:support@biggidata.com" target="_blank">support@biggidata.com</a></p>
+  <p>© 2025 Biggi Data. All Rights Reserved.</p>
+  <p style="font-size:12px; opacity:0.8;">Payments, deposits, and purchases are handled only via the official Biggi Data app. Monnify-approved.</p>
+</footer>
 
-    // tiny entrance animation for features
-    document.addEventListener('DOMContentLoaded', ()=>{
-      document.querySelectorAll('.fadeIn').forEach((el,i)=>{
-        el.style.animationDelay = (i*80)+'ms'
-      })
-    })
-  </script>
+<!-- WHATSAPP BUTTON -->
+<a href="https://wa.me/2348012345678" target="_blank" class="whatsapp-btn" title="Chat with us on WhatsApp">&#x2709;</a>
+
+<!-- POLICY BUTTONS -->
+<div class="policy-buttons">
+  <a href="terms.html" target="_blank" class="policy-btn">Terms</a>
+  <a href="privacy.html" target="_blank" class="policy-btn">Privacy</a>
+  <a href="refund.html" target="_blank" class="policy-btn">Refund Policy</a>
+</div>
+
+<script>
+// Scroll to download
+function scrollToDownload() {
+  document.getElementById("download-section").scrollIntoView({behavior:"smooth"});
+}
+
+// Hamburger menu toggle
+const hamburger = document.getElementById("hamburgerBtn");
+const navMenu = document.getElementById("navMenu");
+hamburger.addEventListener("click", () => navMenu.classList.toggle("open"));
+
+// Theme toggle
+const themeToggle = document.getElementById("themeToggle");
+themeToggle.addEventListener("click", () => {
+  document.body.classList.toggle("light");
+  themeToggle.textContent = document.body.classList.contains("light") ? "Dark Mode" : "Light Mode";
+});
+
+// Fade-in on scroll
+const fadeEls = document.querySelectorAll(".fade-in");
+function revealOnScroll() {
+  const trigger = window.innerHeight * 0.85;
+  fadeEls.forEach(el => {
+    if(el.getBoundingClientRect().top < trigger) el.classList.add("show");
+  });
+}
+window.addEventListener("scroll", revealOnScroll);
+revealOnScroll();
+
+// Contact form
+function handleContact(e) {
+  e.preventDefault();
+  const name = document.getElementById("name").value.trim();
+  const email = document.getElementById("email").value.trim();
+  const phone = document.getElementById("phone").value.trim();
+  const message = document.getElementById("message").value.trim();
+  if(!name || !email || !phone) {
+    alert("Please fill required fields");
+    return;
+  }
+  alert(`Thank you, ${name}. Your message has been received. Please use the app for deposits, purchases, and rewards. Payments occur only inside the app.`);
+  document.getElementById("name").value = "";
+  document.getElementById("email").value = "";
+  document.getElementById("phone").value = "";
+  document.getElementById("message").value = "";
+}
+
+// Testimonial carousel
+const testimonials = document.querySelectorAll('.test-carousel .testimonial');
+let currentTest = 0;
+function showNextTestimonial() {
+  testimonials[currentTest].classList.remove('active');
+  currentTest = (currentTest + 1) % testimonials.length;
+  testimonials[currentTest].classList.add('active');
+}
+setInterval(showNextTestimonial, 5000);
+</script>
+
 </body>
 </html>
