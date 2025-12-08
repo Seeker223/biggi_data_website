@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Terms & Conditions — Biggi Data</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #000;           /* Dark background */
+    --text: #fff;         /* Main text */
+    --card: #222;         /* Card/section background */
+    --accent: #FF7A00;    /* Brand orange accent */
+    --gold: #FFB400;      /* Secondary gold accent */
+    --muted: #bbb;        /* Subtle text */
+  }
+  body.light {
+    --bg: #fff;
+    --text: #000;
+    --card: #f7f7f7;
+    --accent: #FF7A00;
+    --gold: #FFB400;
+    --muted: #555;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    transition: background 0.4s, color 0.4s;
+  }
+
+  a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  a:hover {
+    color: var(--gold);
+    text-decoration: underline;
+  }
+
+  .wrapper {
+    width: 90%;
+    max-width: 900px;
+    margin: 60px auto;
+  }
+
+  h1 {
+    color: var(--accent);
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 32px;
+  }
+  h3 {
+    margin-top: 25px;
+    margin-bottom: 10px;
+    color: var(--accent);
+  }
+  p {
+    margin-bottom: 15px;
+    color: var(--text);
+  }
+  ul {
+    margin-left: 20px;
+    margin-bottom: 15px;
+  }
+
+  footer {
+    text-align: center;
+    margin: 60px 0 20px;
+    opacity: 0.8;
+    font-size: 14px;
+    color: var(--muted);
+  }
+
+  .theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: var(--card);
+    color: var(--text);
+    border: 1px solid var(--accent);
+    padding: 8px 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    z-index: 999;
+  }
+  .theme-toggle:hover {
+    background: var(--accent);
+    color: #000;
+  }
+
+  @media(max-width:600px){
+    .wrapper {
+      width: 95%;
+      margin: 40px auto;
+    }
+    .theme-toggle {
+      padding: 6px 12px;
+      font-size: 14px;
+    }
+  }
+</style>
+</head>
+<body>
+
+<button class="theme-toggle" id="themeToggle">Light Mode</button>
+
+<div class="wrapper">
+  <h1>Terms & Conditions</h1>
+  <p>Welcome to <strong>Biggi Data</strong>. By accessing or using our app and services, you agree to comply with these Terms & Conditions. Please read them carefully.</p>
+
+  <h3>1. Use of App</h3>
+  <p>You may use the Biggi Data app for personal purposes only. All deposits, purchases, and rewards must be done via the official app.</p>
+
+  <h3>2. Payments & Deposits</h3>
+  <p>All payments, deposits, and transactions occur exclusively inside the app. Biggi Data is not responsible for payments made outside the official app.</p>
+
+  <h3>3. Rewards & Tickets</h3>
+  <p>Rewards earned from data purchases are redeemable only through the app. Biggi Data reserves the right to modify the reward system at any time.</p>
+
+  <h3>4. User Accounts</h3>
+  <p>Users are responsible for maintaining the confidentiality of their account details. Any activity under your account is your responsibility.</p>
+
+  <h3>5. Limitation of Liability</h3>
+  <p>Biggi Data is not liable for any loss, delay, or error caused by network providers or third-party services. We ensure prompt delivery, but occasional delays may occur.</p>
+
+  <h3>6. Changes to Terms</h3>
+  <p>We may update these Terms & Conditions periodically. Continued use of the app after changes constitutes acceptance of the updated terms.</p>
+
+  <h3>7. Contact</h3>
+  <p>If you have questions regarding these terms, please contact us via WhatsApp <a href="https://wa.me/2348012345678" target="_blank" rel="noopener noreferrer">+234 801 234 5678</a> or email <a href="mailto:support@biggidata.com" target="_blank" rel="noopener noreferrer">support@biggidata.com</a>.</p>
+</div>
+
+<footer>
+  &copy; 2025 <strong>Biggi Data</strong>. All Rights Reserved.
+</footer>
+
+<script>
+// Theme toggle
+const themeToggle = document.getElementById('themeToggle');
+themeToggle.addEventListener('click', () => {
+  document.body.classList.toggle('light');
+  themeToggle.textContent = document.body.classList.contains('light') ? 'Dark Mode' : 'Light Mode';
+});
+</script>
+
+</body>
+</html>
