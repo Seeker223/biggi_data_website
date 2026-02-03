@@ -4,25 +4,168 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Delete Account - Biggi Data</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="img/biggiImage.png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #000;
+            --text: #fff;
+            --card: #222;
+            --accent: #FF7A00;
+            --muted: #bbb;
+        }
+
+        body.light {
+            --bg: #fff;
+            --text: #000;
+            --card: #f7f7f7;
+            --accent: #FF7A00;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Poppins", sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            transition: background 0.4s, color 0.4s;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--accent);
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        a:hover {
+            opacity: 0.8;
+            text-decoration: underline;
+        }
+
+        .wrapper {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* HEADER */
+        header {
+            padding: 25px 0;
+            border-bottom: 1px solid var(--card);
+            margin-bottom: 40px;
+        }
+
+        header h1 {
+            font-size: 32px;
+            font-weight: 700;
+            color: var(--accent);
+            letter-spacing: 1px;
+        }
+
+        /* MAIN CONTENT */
+        main {
+            min-height: calc(100vh - 200px);
+            padding: 0 0 40px 0;
+        }
+
+        main h2 {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: var(--accent);
+        }
+
+        main p {
+            font-size: 16px;
+            color: var(--text);
+            margin-bottom: 15px;
+            line-height: 1.8;
+        }
+
+        main ul {
+            list-style: none;
+            margin: 20px 0;
+            padding-left: 20px;
+        }
+
+        main ul li {
+            font-size: 15px;
+            color: var(--muted);
+            margin-bottom: 12px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        main ul li:before {
+            content: "▪";
+            color: var(--accent);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        /* FOOTER */
+        footer {
+            padding: 30px 0;
+            border-top: 1px solid var(--card);
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        footer p {
+            font-size: 14px;
+            color: var(--muted);
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 24px;
+            }
+
+            main h2 {
+                font-size: 22px;
+            }
+
+            main p {
+                font-size: 15px;
+            }
+
+            main ul li {
+                font-size: 14px;
+            }
+
+            .wrapper {
+                width: 95%;
+            }
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>Biggi Data</h1>
-    </header>
-    <main>
-        <h2>Account Deletion – Biggi Data</h2>
-        <p>Users can request deletion of their Biggi Data account by sending an email to <a href="mailto:support@yourdomain.com">support@yourdomain.com</a> using their registered email address.</p>
-        <p>Once verified, we will permanently delete:</p>
-        <ul>
-            <li>User profile information</li>
-            <li>Wallet data</li>
-            <li>Game activity and reward history</li>
-            <li>Some transaction records may be retained for up to 90 days or longer where required by law for fraud prevention and financial compliance.</li>
-        </ul>
-    </main>
-    <footer>
-        <p>&copy; 2026 Biggi Data. All rights reserved.</p>
-    </footer>
+    <div class="wrapper">
+        <header>
+            <h1>Biggi Data</h1>
+        </header>
+        <main>
+            <h2>Account Deletion – Biggi Data</h2>
+            <p>Users can request deletion of their Biggi Data account by sending an email to <a href="mailto:support@yourdomain.com">support@yourdomain.com</a> using their registered email address.</p>
+            <p>Once verified, we will permanently delete:</p>
+            <ul>
+                <li>User profile information</li>
+                <li>Wallet data</li>
+                <li>Game activity and reward history</li>
+                <li>Some transaction records may be retained for up to 90 days or longer where required by law for fraud prevention and financial compliance.</li>
+            </ul>
+        </main>
+        <footer>
+            <p>&copy; 2026 Biggi Data. All rights reserved.</p>
+        </footer>
+    </div>
 </body>
 </html>
